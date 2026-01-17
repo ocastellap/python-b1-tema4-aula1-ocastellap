@@ -55,28 +55,29 @@ Exemple:
          "Polly"        
 """
 # Write abstract class Animal here
+from abc import ABC, abstractmethod
 
+class Animal(ABC):
+	def __init__(self, name):
+		self.name = name
+		
 # Corret and overwrite class Dog(Animal) here 
-class Dog():
-    def __init__(self, name):
-        self.name = name
-
+class Dog(Animal):
     def talk(self):
-        pass
+		return "¡Guau!"
+        
 
 # Corret and overwrite class Cat(Animal) here 
 class Cat():
-    def __init__(self, name):
-        self.name = name
     def talk(self):
-        pass
+		return "¡Meow!"
+        
 
 # Corret and overwrite class Parrot(Animal) here 
 class Parrot():
-    def __init__(self, name):
-        self.name = name
     def talk(self):
-        pass
+		return "¡Whistle!"
+        
 
 
 
