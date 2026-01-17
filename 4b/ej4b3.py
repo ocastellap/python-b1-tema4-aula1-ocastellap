@@ -83,7 +83,19 @@ def create_list(length_list):
     """
 
     # Write here your code
-    pass
+    if length_list < 0:
+        raise ValueError("The number must be positive")
+
+    # List stored in RAM
+    ram_list = []
+    for i in range(length_list):
+        ram_list.append(random.randint(0, 100))
+
+    # List stored in Heap (deep copy)
+    heap_list = copy.deepcopy(ram_list)
+
+    return ram_list, heap_list
+    
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
