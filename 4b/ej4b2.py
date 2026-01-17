@@ -52,7 +52,17 @@ Exemple:
 def average_score_ram(scores_dict):
     # Store the dictionary in RAM
     # Write here your code
-    pass
+    total = 0
+    count = 0
+    for score in scores_dict.values():
+        total += score
+        count += 1
+    
+    if count == 0:
+        return count
+    
+    return total / count
+    
 
 
 def average_score_heap(scores_dict):
