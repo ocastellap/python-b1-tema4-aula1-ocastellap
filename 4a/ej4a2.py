@@ -45,7 +45,15 @@ Exemple:
 
 def count_fruits(fruits_list):
     # Write here your code
-    pass
+    diccionari = {}
+    for element in fruits_list:
+        if element in diccionari:
+            diccionari[element] += 1
+        else:
+            diccionari[element] = 1
+
+    return diccionari
+    
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
