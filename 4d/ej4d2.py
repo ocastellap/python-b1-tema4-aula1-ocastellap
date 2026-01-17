@@ -38,7 +38,20 @@ Exemple:
 """
 def create_read_file():
     # Write here your code
-    pass
+     # Crear i escriure el fitxer
+    with open("text_file.txt", "w") as file:
+        file.write("Joan\n")
+        file.write("Perez\n")
+        file.write("30\n")
+
+    # Llegir el fitxer
+    with open("text_file.txt", "r") as file:
+        for line in file:
+            print(line.strip())
+
+if __name__ == "__main__":
+    create_read_file()
+   
 
 
 
